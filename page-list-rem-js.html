@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <title>flex test</title>
+    <style>
+      body {
+        background-color: #f6f6f6;
+      }
+
+      /*媒体查询*/
+      @media screen and (min-width: 750px) {
+        html {
+          font-size: 50px;
+        }
+      }
+      @media screen and (min-width: 720px) and (max-width: 749px) {
+        html {
+          font-size: 48px;
+        }
+      }
+      @media screen and (min-width: 540px) and (max-width: 719px) {
+        html {
+          font-size: 36px;
+        }
+      }
+      @media screen and (min-width: 480px) and (max-width: 539px) {
+        html {
+          font-size: 32px;
+        }
+      }
+      @media screen and (min-width: 424px) and (max-width: 479px) {
+        html {
+          font-size: 28.27px;
+        }
+      }
+      @media screen and (min-width: 414px) and (max-width: 423px) {
+        html {
+          font-size: 27.6px;
+        }
+      }
+      @media screen and (min-width: 400px) and (max-width: 413px) {
+        html {
+          font-size: 26.67px;
+        }
+      }
+      @media screen and (min-width: 384px) and (max-width: 399px) {
+        html {
+          font-size: 25.6px;
+        }
+      }
+      @media screen and (min-width: 375px) and (max-width: 383px) {
+        html {
+          font-size: 25px;
+        }
+      }
+      @media screen and (min-width: 319px) and (max-width: 374px) {
+        html {
+          font-size: 25px;
+        }
+      }
+      body {
+        -moz-user-select: none; /*火狐*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -ms-user-select: none; /*IE10*/
+        -khtml-user-select: none; /*早期浏览器*/
+        user-select: none;
+      }
+      .main {
+        justify-content: space-between;
+        align-items: flex-start;
+        display: flex;
+        /* padding:0px,0.2rem,0px,0.2rem; */
+        height: auto;
+      }
+      .left {
+        flex-grow: 1;
+      }
+      .right {
+        flex-grow: 1;
+      }
+      .content-item {
+        width: 6.6rem;
+        margin: 0px auto 0.4rem auto;
+        background-color: white;
+        border-radius: 0.1rem;
+      }
+      .content-item-img-left,
+      .content-item-img-right {
+        text-align: center;
+        line-height: 0.4rem;
+      }
+      .content-item-img-left img {
+        width: 6.6rem;
+        height: 6.6rem;
+        border-top-left-radius: 0.2rem;
+        border-top-right-radius: 0.2rem;
+      }
+      .content-item-img-right img {
+        width: 6.6rem;
+        height: 8.5rem;
+        border-top-left-radius: 0.2rem;
+        border-top-right-radius: 0.2rem;
+      }
+      .content-item-title {
+        margin-top: 0.2rem;
+        padding: 0px 0.2rem 0px 0.2rem;
+        font-size: 0.4rem;
+        color: #333333;
+        border-radius: 0.56rem;
+        text-align: left;
+      }
+      .content-item-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.2rem;
+        margin-top: 0.2rem;
+        padding: 0px 0.2rem 0.2rem 0.2rem;
+      }
+      .content-item-avatar {
+        height: 0.4rem;
+        line-height: 0.4rem;
+      }
+      .content-item-avatar img {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 0.5rem;
+      }
+      .content-item-author {
+        font-size: 0.32rem;
+        color: #555555;
+        height: 1rem;
+        line-height: 1rem;
+        margin-left: 0.2rem;
+      }
+      .content-item-tags {
+        font-size: 0.32rem;
+        color: #aaaaaa;
+        height: 1rem;
+        line-height: 1rem;
+      }
+      .avatar-author {
+        display: flex;
+      }
+      .bottom-text {
+        text-align: center;
+        font-size: 0.56rem;
+        color: #aaaaaa;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <script>
+      var left_data = 
+      [
+  {
+    "author_avatar_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/avatar-panda.jpg", 
+    "author_name": "Allen", 
+    "img_href": "http://cms.ratel.technology/1why-should-professionals-choose-second-hand-iphones-and-not-android-phones/", 
+    "img_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/1-1-500x500-1.jpg", 
+    "tags": "Second Hand", 
+    "title": "Why should professionals choose second-hand iPhones and not Android phones?"
+  }, 
+  {
+    "author_avatar_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/avatar-duck.jpg", 
+    "author_name": "Jeff", 
+    "img_href": "http://cms.ratel.technology/2buying-a-used-iphone-heres-what-you-need-to-know/", 
+    "img_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/2-1-386x386-1.jpg", 
+    "tags": "Used iPhone", 
+    "title": "Buying a used iPhone? Here\u2019s what you need to know"
+  }
+]; 
+      var right_data = 
+      [
+  {
+    "author_avatar_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/cat3-1024x768.jpg", 
+    "author_name": "Rogger", 
+    "img_href": "http://cms.ratel.technology/3avoid-these-traps-when-buying-a-used-iphone/", 
+    "img_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/3-1-600x750-1.jpg", 
+    "tags": "Used iPhone", 
+    "title": "Avoid these traps when buying a used iPhone"
+  }, 
+  {
+    "author_avatar_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/avatar-haimianbaobao.jpeg", 
+    "author_name": "Eric", 
+    "img_href": "http://cms.ratel.technology/4is-it-difficult-to-repair-second-hand-mobile-phones-warranty-service-is-the-key/", 
+    "img_url": "http://cms.ratel.technology/wp-content/uploads/2020/09/4-1-700x900-1.jpg", 
+    "tags": "Repaire Phone", 
+    "title": "Is it difficult to repair second-hand mobile phones? Warranty service is the key."
+  }
+];
+
+      item_html_template = `
+            <div class="content-item">
+              <div class="content-item-img-LEFT_OR_RIGHT">
+                <a href="IMG_HREF">
+                  <img src="IMG_URL" ></img>
+                </a>
+              </div>
+              <div class="content-item-title">TITLE</div>
+              <div class="content-item-bottom">
+                <div class="avatar-author">
+                  <div class="content-item-avatar">
+                     <img src="AUTHOR_AVATAR_URL" ></img>
+                  </div>
+                  <div class="content-item-author">AUTHOR_NAME</div>
+                </div>
+                <div class="content-item-tags">TAGS</div>
+              </div>
+            </div>
+`;
+      function generateItem(item, left_or_right) {
+          item_html = item_html_template.replace(/IMG_HREF/, item.img_href)
+          item_html = item_html.replace(/IMG_URL/, item.img_url)
+          item_html = item_html.replace(/TITLE/, item.title)
+          item_html = item_html.replace(/AUTHOR_AVATAR_URL/, item.author_avatar_url)
+          item_html = item_html.replace(/AUTHOR_NAME/, item.author_name)
+          item_html = item_html.replace(/TAGS/, item.tags)
+          item_html = item_html.replace(/LEFT_OR_RIGHT/, left_or_right);
+          return item_html;
+      }
+      function generateDataHtml(data, left_or_right, parent_id) {
+        data_html = "";
+        for (i = 0; i < data.length; i++) {
+          data_html = data_html + generateItem(data[i], left_or_right);
+        }
+        document.getElementById(parent_id).innerHTML = data_html;
+      }
+      function generateMainHtml() {
+        generateDataHtml(left_data, "left", "main-left");
+        generateDataHtml(right_data, "right", "main-right");
+      }
+    </script>
+    <div class="main">
+      <div class="left" id="main-left"></div>
+      <div class="right" id="main-right"></div>
+    </div>
+    <div class="bottom-text">The End~</div>
+    <script>
+      generateMainHtml();
+    </script>
+  </body>
+</html>
