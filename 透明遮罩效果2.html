@@ -1,0 +1,36 @@
+<html>
+  <head><title>透明遮罩效果2</title>
+  <style>
+    body{width:370px}
+
+.post {
+  position: relative;
+  overflow: hidden;
+}
+p .more-link { 
+  font-weight: bold;
+  position: absolute; 
+  bottom: 90px;
+  width: 100%; 
+  text-align: center; 
+  margin-bottom: -10px; /* ajust this */
+  padding: 90px 0 20px 0; 
+	background-image: linear-gradient(to bottom, transparent, white);
+}
+  </style>
+  </head>
+  <body>
+    <div class="post">
+
+     <p>The text fades out at the bottom and has a "More..." link. Text fade out is nothing new around here. But since this is a slightly different idea and the times-are-a-changin' and we can get a bit more progressive with this idea.
+     </p><p>
+     The box will be limited in height by the appropriate property max-height with it's overflow set to hidden. We'll also use relative positioning as we will need that to use absolute positioning on the read-more paragraph, which is locked to the bottom of the box and uses CSS3 gradients to achieve the text fade out.
+     </p>
+     <p> 
+       <a href="#" class="more-link">
+       <span>(more…)</span>
+       </a>
+     </p>
+     </div>
+  </body>
+</html>

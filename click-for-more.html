@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>test</title>
+  </head>
+  <body>
+    <style>
+      /*媒体查询*/
+      @media screen and (min-width: 750px) {
+        html {
+          font-size: 50px;
+        }
+      }
+      @media screen and (min-width: 720px) and (max-width: 749px) {
+        html {
+          font-size: 48px;
+        }
+      }
+      @media screen and (min-width: 540px) and (max-width: 719px) {
+        html {
+          font-size: 36px;
+        }
+      }
+      @media screen and (min-width: 480px) and (max-width: 539px) {
+        html {
+          font-size: 32px;
+        }
+      }
+      @media screen and (min-width: 424px) and (max-width: 479px) {
+        html {
+          font-size: 28.27px;
+        }
+      }
+      @media screen and (min-width: 414px) and (max-width: 423px) {
+        html {
+          font-size: 27.6px;
+        }
+      }
+      @media screen and (min-width: 400px) and (max-width: 413px) {
+        html {
+          font-size: 26.67px;
+        }
+      }
+      @media screen and (min-width: 384px) and (max-width: 399px) {
+        html {
+          font-size: 25.6px;
+        }
+      }
+      @media screen and (min-width: 375px) and (max-width: 383px) {
+        html {
+          font-size: 25px;
+        }
+      }
+      @media screen and (min-width: 319px) and (max-width: 374px) {
+        html {
+          font-size: 25px;
+        }
+      }
+
+      a:link {
+        text-decoration: none; /* 指正常的未被访问过的链接*/
+      }
+      a:visited {
+        text-decoration: none; /*指已经访问过的链接*/
+      }
+      a:hover {
+        text-decoration: none; /*指鼠标在链接*/
+      }
+      a:active {
+        text-decoration: none;
+      } /* 指正在点的链接*/
+      a {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        -webkit-user-select: none;
+        -moz-user-focus: none;
+        -moz-user-select: none;
+        text-decoration: none;
+      }
+      .half-transparent {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(255, 255, 255, 220);
+        margin-top: -3rem !important;
+        z-index: 1;
+        filter: alpha(Opacity=80);
+        -moz-opacity: 0.5;
+        opacity: 0.5;
+        background-color: #ffffff;
+      }
+      .click-for-more {
+        text-align: center;
+        width: 66.7%;
+        height: 1.56rem;
+        line-height: 1.56rem;
+        font-size: 0.6rem;
+        border: 2px solid #7a7a7a;
+        border-radius: 0.78rem;
+        margin: 0 auto 0.84rem auto;
+        color: black;
+        margin-bottom: 3rem !important;
+      }
+      .click-for-more-parent {
+        width: 100%;
+        margin-top: 0;
+      }
+      .test{
+        width: 100%;
+        height: 200px;
+      }
+    </style>
+        <script>
+          function gotoGp(){
+            window.location.href="https://play.google.com/store/apps/details?id=com.tik3c"
+          }
+        </script>
+<div class="test">
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+  这是一段测试文字，看看能不能被遮盖住
+
+      </div>
+      <div class="click-for-more-parent">
+        <div class="half-transparent"></div>
+          <div class="click-for-more" onclick="gotoGp()">Click for more</div>
+      </div>
+  </body>
+</html>
