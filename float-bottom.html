@@ -1,112 +1,122 @@
 <html>
   <head>
-    <title>test</title>
-  </head>
-  <body>
+    <meta name="referrer" content="always" />
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> -->
+    <title>float bottom adjust</title>
+    <script>
+
+    </script>
     <style>
       /*媒体查询*/
-      @media screen and (min-width: 750px) {
-        html {
-          font-size: 50px;
-        }
+@media screen and (min-width: 750px){
+	html {
+	    font-size: 50px;
+	}
+}
+@media screen and (min-width: 720px) and (max-width: 749px){
+	html {
+	    font-size: 48px;
+	}
+}
+@media screen and (min-width: 540px) and (max-width: 719px){
+	html {
+	    font-size: 36px;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 539px){
+	html {
+	    font-size: 32px;
+	}
+}
+@media screen and (min-width: 424px) and (max-width: 479px){
+	html {
+	    font-size: 28.27px;
+	}
+}
+@media screen and (min-width: 414px) and (max-width: 423px) {
+	html {
+	    font-size: 27.6px;
+	}
+}
+@media screen and (min-width: 400px) and (max-width: 413px){
+	html {
+	    font-size: 26.67px;
+	}
+}
+@media screen and (min-width: 384px) and (max-width: 399px){
+	html {
+	    font-size: 25.6px;
+	}
+}
+@media screen and (min-width: 375px) and (max-width: 383px){
+	html {
+	    font-size: 25px;
+	}
+}
+@media screen and (min-width: 319px) and (max-width: 374px){
+	html {
+	    font-size: 25px;
+	}
+}
+body{
+	-moz-user-select:none;/*火狐*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-ms-user-select:none;/*IE10*/
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+}
+      body {
+        background-color: blue;
       }
-      @media screen and (min-width: 720px) and (max-width: 749px) {
-        html {
-          font-size: 48px;
-        }
-      }
-      @media screen and (min-width: 540px) and (max-width: 719px) {
-        html {
-          font-size: 36px;
-        }
-      }
-      @media screen and (min-width: 480px) and (max-width: 539px) {
-        html {
-          font-size: 32px;
-        }
-      }
-      @media screen and (min-width: 424px) and (max-width: 479px) {
-        html {
-          font-size: 28.27px;
-        }
-      }
-      @media screen and (min-width: 414px) and (max-width: 423px) {
-        html {
-          font-size: 27.6px;
-        }
-      }
-      @media screen and (min-width: 400px) and (max-width: 413px) {
-        html {
-          font-size: 26.67px;
-        }
-      }
-      @media screen and (min-width: 384px) and (max-width: 399px) {
-        html {
-          font-size: 25.6px;
-        }
-      }
-      @media screen and (min-width: 375px) and (max-width: 383px) {
-        html {
-          font-size: 25px;
-        }
-      }
-      @media screen and (min-width: 319px) and (max-width: 374px) {
-        html {
-          font-size: 25px;
-        }
-      }
-
-      a:link {
-        text-decoration: none; /* 指正常的未被访问过的链接*/
-      }
-      a:visited {
-        text-decoration: none; /*指已经访问过的链接*/
-      }
-      a:hover {
-        text-decoration: none; /*指鼠标在链接*/
-      }
-      a:active {
-        text-decoration: none;
-      } /* 指正在点的链接*/
-      a {
-        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-        -webkit-user-select: none;
-        -moz-user-focus: none;
-        -moz-user-select: none;
-      }
-      .float-bottom{
+      .bottom-container{
         border-top: 0.05rem solid #e9ebed;
-        width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
         height: 2.2rem;
+        position: fixed;
+        left:0;
+        bottom:0;
         display: flex;
-      z-index: 100;
-      position: fixed;
-      bottom: -1.2rem;
-      left: 0
+        z-index: 1000;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0px 0px !important;
       }
-        /* position: fixed; */
-        /* bottom: 180px; */
-        /* left: 0px; */
-        /* z-index: 100; */
-      .img-parent {
+      .div1 {
+        background-color: gray;
+        height: 400px;
+      }
+      .div2 {
+        background-color: white;
+        height: 400px;
+      }
+      .bottom-left {
+      }
+      .bottom-left img {
+        width: 1.52rem;
+        height: 1.52rem;
         margin-top: 0.34rem;
         margin-left: 0.64rem;
       }
-      .img-parent img {
-        width: 1.52rem;
-        height: 1.52rem;
-      }
-      .middle-parent {
-        margin-left: 0.5rem;
-        /* margin-top: 0.5rem; */
+      .bottom-middle {
         flex-grow: 1;
+        margin-left: 0.5rem;
+        margin-top: 0.6rem;
       }
       .middle-title {
         font-size: 0.56rem;
+        line-height: 0.56rem;
       }
       .middle-desc {
+        margin-top: 0.32rem;
         font-size: 0.44rem;
+        line-height: 0.44rem;
         color: #8e8e8e;
+      } 
+      .bottom-right {
       }
       .download-btn {
         margin-right: 0.5rem;
@@ -118,42 +128,27 @@
         border: 2px solid #7a7a7a;
         border-radius: 1rem;
         background-color: #2f2f2f;
-        margin-top: 0.25rem;
+        margin-top: 0.35rem;
         color: white;
       }
-
-
     </style>
-    <script>
-      function gotoGp(){
-        window.location.href="https://play.google.com/store/apps/details?id=com.tik3c"
-      }
-    </script>
-    <div class="float-bottom">
-      <div class="img-parent">
-        <img
-          src="http://cms.ratel.technology/wp-content/uploads/2020/09/logo-512x512-1.png"
-        />
+  </head>
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="bottom-container">
+      <div class="bottom-left">
+        <img src="http://cms.ratel.technology/wp-content/uploads/2020/09/logo-512x512-1.png" />
       </div>
-      <div class="middle-parent">
+      <div class="bottom-middle">
         <div class="middle-title">Tic 3c</div>
         <div class="middle-desc">Better Cheaper more Reliable</div>
       </div>
-      <div class="download-btn" onclick="gotoGp()">Download</div>
-    </div>
-    <!-- <div class="bottom-container">
-      <div class="go-to-gp-parent">
-        <div class="img-parent">
-          <img
-            src="http://cms.ratel.technology/wp-content/uploads/2020/09/logo-512x512-1.png"
-          />
-        </div>
-        <div class="middle-parent">
-          <div class="middle-title">Tic 3c</div>
-          <div class="middle-desc">Better Cheaper more Reliable</div>
-        </div>
-        <div class="download-btn" onclick="gotoGp()">Download</div>
+      <div class="bottom-right">
+        <div class="download-btn">Download</div>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>
